@@ -1,0 +1,186 @@
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="rezervari.css">
+  <title>Rezervări - Traveler</title>
+</head>
+<body>
+  <nav>
+    <div class="nav__logo">Traveler</div>
+    <ul class="nav__links">
+      <li class="link"><a href="index.html">Acasă</a></li>
+      <li class="link"><a href="#">Rezervare</a></li>
+      <li class="link"><a href="blog.html">Blog</a></li>
+      <li class="link"><a href="contact-us.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="section__container header__container">
+    <div class="header__image__container">
+      <div class="header__content">
+        <h1>Rezervă vacanța ta de vis</h1>
+        <p>Completează formularul de mai jos pentru a rezerva cazarea la cele mai bune prețuri.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="vacation__form__container">
+    <form id="first-form" action="#" method="POST">
+      <div class="form__group">
+        <div class="input__group">
+          <select name="destination" id="destination" required>
+            <option value="" disabled selected>Alege o destinație</option>
+            <option value="turkey">Turcia</option>
+            <option value="france">Franța</option>
+            <option value="italy">Italia</option>
+            <option value="spain">Spania</option>
+            <option value="greece">Grecia</option>
+            <option value="portugal">Portugalia</option>
+            <option value="japan">Japonia</option>
+            <option value="usa">SUA</option>
+            <option value="maldives">Maldivele</option>
+            <option value="thailand">Thailanda</option>
+          </select>
+          <label for="destination">Destinația</label>
+        </div>
+      </div>
+      <div class="form__group">
+        <div class="input__group">
+          <input type="date" name="checkin" id="checkin" required />
+          <label for="checkin">Data Check-In</label>
+        </div>
+      </div>
+      <div class="form__group">
+        <div class="input__group">
+          <input type="date" name="checkout" id="checkout" required />
+          <label for="checkout">Data Check-Out</label>
+        </div>
+      </div>
+      <div class="form__group">
+        <div class="input__group">
+          <select name="room_type" id="room_type" required>
+            <option value="" disabled selected></option>
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+            <option value="suite">Suite</option>
+          </select>
+          <label for="room_type">Tipul Camerei</label>
+        </div>
+      </div>
+      <div class="form__group">
+        <div class="input__group">
+          <textarea name="special_requests" id="special_requests" rows="4"></textarea>
+          <label for="special_requests">Cereri Speciale</label>
+        </div>
+      </div>
+      <button type="button" class="btn" id="submit-button">Rezervă Vacanța</button>
+    </form>
+  </div>
+
+  <!-- Al doilea formular (ascuns la început) -->
+  <div id="second-form-container" class="vacation__form__container" style="display: none;">
+    <form id="second-form" action="#" method="POST">
+      <div class="form__group">
+        <div class="input__group">
+          <input type="text" name="first_name" id="first_name" required />
+          <label for="first_name">Nume</label>
+        </div>
+      </div>
+      <div class="form__group">
+        <div class="input__group">
+          <input type="text" name="last_name" id="last_name" required />
+          <label for="last_name">Prenume</label>
+        </div>
+      </div>
+      <div class="form__group">
+        <div class="input__group">
+          <input type="tel" name="phone_number" id="phone_number" required />
+          <label for="phone_number">Număr de Telefon</label>
+        </div>
+      </div>
+      <button class="btn">Confirmă Rezervarea</button>
+    </form>
+  </div>
+
+  <section class="popular__container">
+    <h2 class="section__header">Hoteluri Recomandate</h2>
+    <div class="popular__grid">
+      <div class="popular__card">
+        <img src="assets/hotel-1.jpg" alt="hotel recomandat" />
+        <div class="popular__content">
+          <div class="popular__card__header">
+            <h4>The Plaza Hotel</h4>
+            <h4>$499</h4>
+          </div>
+          <p>New York City, SUA</p>
+        </div>
+      </div>
+      <div class="popular__card">
+        <img src="assets/hotel-2.jpg" alt="hotel recomandat" />
+        <div class="popular__content">
+          <div class="popular__card__header">
+            <h4>Ritz Paris</h4>
+            <h4>$549</h4>
+          </div>
+          <p>Paris, Franța</p>
+        </div>
+      </div>
+      <div class="popular__card">
+        <img src="assets/hotel-3.jpg" alt="hotel recomandat" />
+        <div class="popular__content">
+          <div class="popular__card__header">
+            <h4>The Peninsula</h4>
+            <h4>$599</h4>
+          </div>
+          <p>Hong Kong</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <h3>Traveler</h3>
+        <p>Agency.donicaGo este un site de rezervări hoteliere de top care oferă o modalitate simplă și convenabilă de a găsi și rezerva cazări la nivel global.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Companie</h4>
+        <p>Despre noi</p>
+        <p>Echipa noastră</p>
+        <p>Blog</p>
+        <p>Rezervare</p>
+        <p>Contact</p>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <p>Întrebări frecvente</p>
+        <p>Termeni și condiții</p>
+        <p>Politica de confidențialitate</p>
+      </div>
+      <div class="footer__col">
+        <h4>Resurse</h4>
+        <p>Rețele sociale</p>
+        <p>Centru de ajutor</p>
+        <p>Parteneriate</p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2025 Traveler. Toate drepturile rezervate.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('submit-button').addEventListener('click', function() {
+
+      document.getElementById('first-form').style.display = 'none';
+
+
+      document.getElementById('second-form-container').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
